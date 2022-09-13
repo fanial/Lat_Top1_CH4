@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Lat_Top1_CH4</string>
+    <string name="gambar_berita">gambar</string>
+    <string name="judul">judul</string>
+    <string name="jurnalis">jurnalis</string>
+    <string name="isi_berita">isi</string>
+    <string name="tanggal_berita">tanggal</string>
+    <string name="simbol_batas">-</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

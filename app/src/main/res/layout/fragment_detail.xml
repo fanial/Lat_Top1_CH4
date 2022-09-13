@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".latihan1.DetailFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+   <RelativeLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:layout_margin="8dp"
+       >
+       <ImageView
+           android:id="@+id/vDetailFoto"
+           android:layout_width="match_parent"
+           android:layout_height="150dp"
+           android:contentDescription="@string/gambar_berita" />
+
+       <TextView
+           android:id="@+id/vDetailJudul"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/vDetailFoto"
+           android:gravity="center_horizontal"
+           android:layout_marginTop="4dp"
+           android:hint="@string/judul"
+           android:textColorHint="#757575"
+           android:textSize="18sp" />
+
+       <TextView
+           android:id="@+id/vDetailJurnalis"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/vDetailJudul"
+           android:layout_alignParentStart="true"
+           android:layout_marginTop="4dp"
+           android:hint="@string/jurnalis"
+           android:textColorHint="#757575"
+           android:textSize="11sp" />
+
+       <TextView
+           android:id="@+id/batas"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/vDetailJudul"
+           android:layout_toEndOf="@id/vDetailJurnalis"
+           android:layout_marginTop="4dp"
+           android:layout_marginStart="8dp"
+           android:layout_marginEnd="8dp"
+           android:textSize="11sp"
+           android:text="@string/simbol_batas" />
+
+       <TextView
+           android:id="@+id/vDetailTgl"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/vDetailJudul"
+           android:layout_toEndOf="@id/batas"
+           android:layout_marginTop="4dp"
+           android:hint="@string/tanggal_berita"
+           android:textColorHint="#757575"
+           android:textSize="11sp" />
+
+       <TextView
+           android:id="@+id/vIsi"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_below="@id/vDetailJurnalis"
+           android:layout_marginTop="4dp"
+           android:hint="@string/isi_berita"
+           android:textColorHint="#757575" />
+   </RelativeLayout>
+
+</FrameLayout>
