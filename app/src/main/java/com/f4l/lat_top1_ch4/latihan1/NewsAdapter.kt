@@ -33,9 +33,19 @@ class NewsAdapter(var newsList : ArrayList<NewsData>):RecyclerView.Adapter<NewsA
         holder.jurnalis.text = newsList[position].jurnalis
         holder.tgl.text = newsList[position].tgl
         holder.foto.setImageResource(newsList[position].foto)
-        holder.card.setOnClickListener {
-            onClick?.invoke(newsList[position])
-        }
+        val isiDetail = newsList[position].isi
+        holder.card.setOnClickListener(object : View.OnClickListener{
+            override fun onClick(v: View?) {
+                var bundle = Bundle()
+                bundle.putString("judul",holder.judul.text.toString())
+                bundle.putString("jurnalis",holder.jurnalis.text.toString())
+                bundle.putString("tgl",holder.tgl.text.toString())
+                bundle.putString("isi", isiDetail)
+
+                Navigation.findNavController(holder.itemView).navigate(R.id.action_newsFragment_to_detailFragment, bundle)
+            }
+
+        })
     }
 
     override fun getItemCount(): Int = newsList.size

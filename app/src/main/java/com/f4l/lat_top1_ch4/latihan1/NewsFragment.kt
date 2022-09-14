@@ -44,10 +44,6 @@ fun dataNews(){
     adp = NewsAdapter(ArrayList())
     rvNews.adapter = adp
     rvNews.layoutManager = LinearLayoutManager(context)
-
-    adp.onClick = {
-        view?.let { it1 -> Navigation.findNavController(it1).navigate(R.id.action_newsFragment_to_detailFragment) }
-    }
     }
 
 }

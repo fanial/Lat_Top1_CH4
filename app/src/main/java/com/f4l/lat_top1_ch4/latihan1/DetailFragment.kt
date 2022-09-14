@@ -22,6 +22,15 @@ class DetailFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        var getJudul = arguments?.getString("judul")
+        var getJurnalis = arguments?.getString("jurnalis")
+        val getTgl = arguments?.getString("tgl")
+        val getIsi = arguments?.getString("isi")
+
+        vDetailJudul.text = getJudul
+        vDetailJurnalis.text = getJurnalis
+        vDetailTgl.text = getTgl
+        vIsi.text = getIsi
 
     }
 
