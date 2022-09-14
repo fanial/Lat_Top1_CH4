@@ -33,9 +33,9 @@ class NewsAdapter(var newsList : ArrayList<NewsData>):RecyclerView.Adapter<NewsA
         holder.jurnalis.text = newsList[position].jurnalis
         holder.tgl.text = newsList[position].tgl
         holder.foto.setImageResource(newsList[position].foto)
-//        holder.card.setOnClickListener {
-//            onClick?.invoke(newsList[position])
-//        }
+        holder.card.setOnClickListener {
+            onClick?.invoke(newsList[position])
+        }
     }
 
     override fun getItemCount(): Int = newsList.size

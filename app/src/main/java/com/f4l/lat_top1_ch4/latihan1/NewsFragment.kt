@@ -38,29 +38,16 @@ class NewsFragment : Fragment() {
         viewModel.mList.observe(viewLifecycleOwner, Observer {
             adp.setList(it as ArrayList<NewsData>)
         })
-        btn_card_news.setOnClickListener {
-            val detailFoto = adp.newsList[4]
-            val detailJudul = adp.newsList[0]
-            val detailTgl = adp.newsList[1]
-            val detailJurnalis = adp.newsList[2]
-            val detailIsi = adp.newsList[3]
-
-            val bun = Bundle()
-            bun.putString("dataFoto", detailFoto.toString())
-            bun.putString("dataJudul", detailJudul.toString())
-            bun.putString("dataTgl", detailTgl.toString())
-            bun.putString("dataJurnalis", detailJurnalis.toString())
-            bun.putString("dataIsi", detailIsi.toString())
-
-            Navigation.findNavController(view).navigate(R.id.action_newsFragment_to_detailFragment, bun)
-        }
     }
 
 fun dataNews(){
     adp = NewsAdapter(ArrayList())
     rvNews.adapter = adp
     rvNews.layoutManager = LinearLayoutManager(context)
+
+    adp.onClick = {
+        view?.let { it1 -> Navigation.findNavController(it1).navigate(R.id.action_newsFragment_to_detailFragment) }
     }
-}
+    }
 
 }
